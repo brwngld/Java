@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Brwngld</title>
+    <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Font Awesome CSS -->
+     <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <!-- Your custom CSS -->
+     <link rel="stylesheet" href="css/dashboard.css">
+     <!--favi icon-->
+     <link rel="icon" href="data:,">
+<!------------------------------------------------------------->
+</head>
+<body>
+    <!-- Creation of the sidebar [Dashboard, Orders, Products, Customers etc]-->
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li class="active">
+                <a href="#"> 
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"> 
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Orders</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"> 
+                    <i class="fas fa-box-open"></i>
+                    <span>Products</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"> 
+                    <i class="fas fa-users"></i>
+                    <span>Customers</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"> 
+                    <i class="fas fa-chart-line"></i>
+                    <span>Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"> 
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li class="Logout">
+                <a href="#"> 
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+            <li class="mode">
+                <a href="#" id="darkModeToggle"> 
+                    <i class="fas fa-moon"></i>
+                    <span>Darkmode</span>
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+
+    <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <span>Primary</span>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user--info">                
+                <div class="search--box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search" oninput="search()">
+                </div>
+                <img src="./image/cat-dpz-instagram-800x1024.jpg" alt="" class="Profile_picture">            
+            </div>
+        </div>
+        <div class="card--container">
+            <h3 class="main--title">Today's data</h3>
+            <div class="card--wrapper" id="paymentCards">                 
+                <div class="payment--card light-red">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">
+                                Payment amount </span>
+                                <span class="amount--value">$500.00</span>
+                        </div>
+                        <i class="fas fa-dollar-sign icon dark-red"></i>
+                    </div>
+                    <span class="card-detail">****
+                        **** **** 3484 </span>
+                </div>
+
+                <div class="payment--card light-purple">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">
+                                Payment order </span>
+                                <span class="amount--value">$200.00</span>
+                        </div>
+                        <i class="fas fa-list icon dark-purple"></i>
+                    </div>
+                    <span class="card-detail">****
+                        **** **** 5542 </span>
+                </div>
+
+                <div class="payment--card light-green">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">
+                                Payment Customer </span>
+                                <span class="amount--value">$350.00</span>
+                        </div>
+                        <i class="fas fa-users icon dark-green"></i>
+                    </div>
+                    <span class="card-detail">****
+                        **** **** 8896 </span>
+                </div>
+
+                <div class="payment--card light-blue">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">
+                                Payment Proceed </span>
+                                <span class="amount--value">$150.00</span>
+                        </div>
+                        <i class="fa-solid fa-check icon dark-blue"></i>
+                    </div>
+                    <span class="card-detail">****
+                        **** **** 7745 </span>
+                </div>
+            </div>
+        </div>
+       
+        <div class="tabular--wrapper">
+            <h3 class="main--title">Finance Data</h3>
+            <div class="table--container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Transaction Type</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>2023-05-01</td>
+                                <td>Expenses</td>
+                                <td>Office Supplies</td>
+                                <td>250</td>
+                                <td>Office Expenses</td>
+                                <td>Pending</td>
+                                <td><button>Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td>2023-05-01</td>
+                                <td>Expenses</td>
+                                <td>Office Supplies</td>
+                                <td>250</td>
+                                <td>Office Expenses</td>
+                                <td>Pending</td>
+                                <td><button>Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td>2023-05-01</td>
+                                <td>Expenses</td>
+                                <td>Office Supplies</td>
+                                <td>250</td>
+                                <td>Office Expenses</td>
+                                <td>Pending</td>
+                                <td><button>Edit</button></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                               <td colspan="7">Total: $1,000.00</td> 
+                            </tr>
+                        </tfoot>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your custom JavaScript -->
+    <script src="java/dashboard.js"></script>
+      
+</body>
+</html>

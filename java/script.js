@@ -127,3 +127,26 @@ document.addEventListener("DOMContentLoaded", function() {
       localStorage.setItem("darkMode", "false");
   }
 });
+
+// Function to toggle the popup and modal overlay
+function toggleOptions() {
+  var options = document.querySelector(".profile-options");
+  var overlay = document.querySelector(".modal-overlay");
+
+  if (options.style.display === "none" || options.style.display === "") {
+      options.style.display = "block";
+      overlay.style.display = "block";
+  } else {
+      options.style.display = "none";
+      overlay.style.display = "none";
+  }
+};
+
+// Function to close the popup and modal overlay
+function closeOptions() {
+  var options = document.querySelector(".profile-options");
+  var overlay = document.querySelector(".modal-overlay");
+
+  options.style.display = "none";
+  overlay.style.display = "none";
+};

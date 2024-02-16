@@ -83,8 +83,18 @@
                     <i class="fa-solid fa-search"></i>
                     <input type="text" id="searchInput" class="form-control" placeholder="Search" oninput="search()">
                 </div>
-                <img src="./image/cat-dpz-instagram-800x1024.jpg" alt="" class="Profile_picture">            
-            </div>
+                <div class="profile-container">
+                    <img src="./image/cat-dpz-instagram-800x1024.jpg" alt="" class="Profile_picture" onclick="toggleOptions()">
+                    <div class="profile-options" id="profileOptions">
+                        <div class="modal-overlay" onclick="closeOptions()"></div>
+                        <div class="modal-content">
+                            <a href="settings.html" class="option">Settings</a>
+                            <a href="profile.html" class="option">Profile</a>
+                            <a href="logout.html" class="option">Logout</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
         </div>
         <div class="card--container">
             <h3 class="main--title">Today's data</h3>

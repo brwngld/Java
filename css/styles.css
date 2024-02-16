@@ -570,3 +570,49 @@ tfoot td {
 .dark-mode .table--container button {
     color: purple; /* Adjust button color for dark mode */
 }
+
+/** Creating a popup **/
+.profile-container {
+    position: relative;
+}
+
+.profile-options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.popup-content {
+    padding: 10px;
+}
+
+.option {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.option:hover {
+    background: #f0f0f0;
+}
+
+.Profile_picture {
+    cursor: pointer;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 0; /* Lower z-index value */
+    display: none; /* Initially hidden */
+}
